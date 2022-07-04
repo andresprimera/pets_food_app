@@ -8,7 +8,7 @@
  * @format
  */
 
-import React, {type PropsWithChildren} from 'react';
+import React, {useEffect, type PropsWithChildren} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -18,6 +18,8 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+
+import SplashScreen from 'react-native-splash-screen';
 
 import {
   Colors,
@@ -63,6 +65,10 @@ const App = () => {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
 
   return (
     <SafeAreaView style={backgroundStyle}>
