@@ -1,105 +1,50 @@
-import React, {type PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import React from 'react';
+import {Text} from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-const Section: React.FC<
-  PropsWithChildren<{
-    title: string;
-  }>
-> = ({children, title}) => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
+import {Navbar} from '@app/components/organisms/Navbar';
+import {Divider} from '@app/components/atoms/Divider';
+import {Card} from '@app/components/atoms/Card';
+import {TextH1} from '@app/components/atoms/TextH1';
+import {TextH2} from '@app/components/atoms/TextH2';
+import {TextH3} from '@app/components/atoms/TextH3';
+import {TextH4} from '@app/components/atoms/TextH4';
+import {TextH5} from '@app/components/atoms/TextH5';
+import {TextLarge} from '@app/components/atoms/TextLarge';
+import {TextRegular} from '@app/components/atoms/TextRegular';
+import {TextMedium} from '@app/components/atoms/TextMedium';
+import {TextSmall} from '@app/components/atoms/TextSmall';
+import {TextTiny} from '@app/components/atoms/TextTiny';
+import {ClickableText} from '@app/components/atoms/ClickableText';
+import {ButtonSmall} from '@app/components/atoms/ButtonSmall';
+import {BasketIcon} from '@app/assets/svgs';
+import {ProductCard} from '@app/components/organisms/ProductCard';
 
 export const HomeScreen = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <>
+      <Navbar />
+
+      <Card>
+        <Text>Card</Text>
+      </Card>
+      <TextH1>Andres h1</TextH1>
+      <Divider />
+      <TextH2>Andres h2</TextH2>
+      <TextH3>Andres h3</TextH3>
+      <TextH4>Andres h4</TextH4>
+      <TextH5>Andres h5</TextH5>
+      <TextLarge>Text large</TextLarge>
+      <TextRegular>Text Regular</TextRegular>
+      <TextMedium>Text Medium</TextMedium>
+      <TextSmall>Text Small</TextSmall>
+      <TextTiny>Text Tiny</TextTiny>
+      <ClickableText onClick={() => console.log('Link clicked')}>
+        Clickable text
+      </ClickableText>
+      <ButtonSmall>
+        <BasketIcon />
+      </ButtonSmall>
+      <ProductCard />
+    </>
   );
 };
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
