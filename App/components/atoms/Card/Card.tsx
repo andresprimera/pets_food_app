@@ -9,5 +9,5 @@ interface Props {
 }
 
 export const Card = (props: Props) => {
-  return <View style={styles.container}>{props.children}</View>;
+  return <View style={[styles.container]}>{props.children}</View>;
 };

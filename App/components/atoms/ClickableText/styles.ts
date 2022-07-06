@@ -7,7 +7,7 @@ const {size} = fonts;
 export const styles = StyleSheet.create({
   text: {
     color: colors.secondary,
-    fontSize: size.h5,
+    fontSize: size.large,
     textAlign: 'left',
     fontFamily: fonts.family.secondary.black,
     cursor: 'pointer',

@@ -1,30 +1,24 @@
 import React from 'react';
 
-import {Text, TouchableOpacity} from 'react-native';
+import {Text, TouchableOpacity, TextStyle} from 'react-native';
 
 import {styles} from './styles';
 
 interface Props {
   children: string;
-  fontFamily?: string;
-  color?: string;
+  style?: TextStyle;
   onClick: () => void;
 }
 
 export const ClickableText = (props: Props) => {
-  const {color, fontFamily, onClick} = props;
-
-  const additionalStyles = {
-    ...(color && {color}),
-    ...(fontFamily && {fontFamily}),
-  };
+  const {onClick, style} = props;
 
   return (
     <TouchableOpacity
       onPress={() => {
         onClick();
       }}>
-      <Text style={[styles.text, additionalStyles]}>{props.children}</Text>
+      <Text style={[styles.text, style]}>{props.children}</Text>
     </TouchableOpacity>
   );
 };

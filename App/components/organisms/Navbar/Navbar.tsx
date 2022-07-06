@@ -9,7 +9,8 @@ import {PawIcon} from '@app/assets/svgs';
 export const Navbar = () => {
   return (
     <View style={styles.container}>
-      <TextH5 color={colors.light} fontFamily={fonts.family.primary.light}>
+      <TextH5
+        style={{color: colors.light, fontFamily: fonts.family.primary.light}}>
         Hola Andrés!
       </TextH5>
 

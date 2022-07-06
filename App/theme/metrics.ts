@@ -12,7 +12,8 @@ export const metrics = {
   screenHeight: height,
   addHeader,
   addFooter,
-  mainHorizontalPadding: width * 0.1,
+  mainHorizontalPadding: width * 0.06,
+  mainVerticalPadding: width * 0.06,
   innerHorzontalPadding: width * 0.03,
   navbarHeight: 78 + addHeader,
 };

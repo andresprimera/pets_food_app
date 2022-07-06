@@ -1,9 +1,13 @@
 import React from 'react';
 
-import {View} from 'react-native';
+import {View, ViewStyle} from 'react-native';
 
 import {styles} from './styles';
 
-export const Divider = () => {
-  return <View style={styles.line} />;
+interface Props {
+  style?: ViewStyle;
+}
+
+export const Divider = (input: Props) => {
+  return <View style={[styles.line, input.style]} />;
 };

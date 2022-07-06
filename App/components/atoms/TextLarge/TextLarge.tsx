@@ -1,22 +1,16 @@
 import React from 'react';
 
-import {Text} from 'react-native';
+import {Text, TextStyle} from 'react-native';
 
 import {styles} from './styles';
 
 interface Props {
   children: string;
-  fontFamily?: string;
-  color?: string;
+  style?: TextStyle;
 }
 
 export const TextLarge = (props: Props) => {
-  const {color, fontFamily} = props;
+  const {style} = props;
 
-  const additionalStyles = {
-    ...(color && {color}),
-    ...(fontFamily && {fontFamily}),
-  };
-
-  return <Text style={[styles.text, additionalStyles]}>{props.children}</Text>;
+  return <Text style={[styles.text, style]}>{props.children}</Text>;
 };
