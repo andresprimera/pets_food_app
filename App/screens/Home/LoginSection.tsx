@@ -12,7 +12,6 @@ export const LoginSection = () => {
     <View style={styles.loginSectionContainer}>
       <TextRegular>Para ver tus pedidos recurrentes debes</TextRegular>
       <ClickableText
-        style={{marginTop: 6}}
         onClick={() => {
           console.log('iniciar sesion');
         }}>

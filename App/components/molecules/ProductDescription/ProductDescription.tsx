@@ -10,7 +10,7 @@ export const ProductDescription = () => {
   return (
     <View style={styles.container}>
       <TextRegular>Producto 1</TextRegular>
-      <TextSmall color={colors.lightGray}>500gr</TextSmall>
+      <TextSmall style={{color: colors.lightGray}}>500gr</TextSmall>
     </View>
   );
 };
