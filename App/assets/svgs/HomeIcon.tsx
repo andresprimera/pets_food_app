@@ -1,14 +1,11 @@
 import * as React from 'react';
-import Svg, {SvgProps, Defs, Path} from 'react-native-svg';
-/* SVGR has dropped some elements not supported by react-native-svg: filter */
+import Svg, {SvgProps, Path} from 'react-native-svg';
 
 const HomeIcon = (props: SvgProps) => (
-  <Svg width={41.817} height={44.795} {...props}>
-    <Defs />
+  <Svg height={40} width={40} {...props}>
     <Path
-      data-name="home_FILL1_wght400_GRAD0_opsz48"
-      d="M9 32.795V14.932L20.983 6l11.834 8.932v17.863h-8.708V22.188h-6.438v10.607Z"
-      fill="#fff"
+      d="M6.667 35V15L20.042 5l13.291 10v20H23.5V23.208h-7.042V35Z"
+      fill="#ffffff"
     />
   </Svg>
 );

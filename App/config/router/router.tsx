@@ -1,12 +1,12 @@
 import React from 'react';
 
-import {ButtonNavigation} from './ButtonNavigation';
 import {NavigationContainer} from '@react-navigation/native';
+import {StackNavigation} from './StackNavigation';
 
 export const Router = () => {
   return (
     <NavigationContainer>
-      <ButtonNavigation />
+      <StackNavigation />
     </NavigationContainer>
   );
 };

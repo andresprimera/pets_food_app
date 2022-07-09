@@ -2,11 +2,13 @@ import React from 'react';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import {Routes} from './routes';
+import {MainBottomTabParamList} from './RouteTypes';
+
+import {ButtonRoutes} from './routes';
 import {colors} from '@app/theme';
 import {BasketIcon, HomeIcon} from '@app/assets/svgs';
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator<MainBottomTabParamList>();
 
 export const ButtonNavigation = () => {
   return (
@@ -18,7 +20,7 @@ export const ButtonNavigation = () => {
 
           if (route.name === 'Home') {
             mainIcon = <HomeIcon />;
-          } else if (route.name === 'Settings') {
+          } else if (route.name === 'Basket') {
             mainIcon = <BasketIcon />;
           }
 
@@ -32,7 +34,7 @@ export const ButtonNavigation = () => {
           height: 100,
         },
       })}>
-      {Routes.map((props, i) => {
+      {ButtonRoutes.map((props, i) => {
         return <Tab.Screen {...props} key={`${props.name}-${i}`} />;
       })}
     </Tab.Navigator>
