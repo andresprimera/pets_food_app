@@ -18,8 +18,11 @@ export const styles = StyleSheet.create({
   stepsTracker: {
     flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center',
     marginBottom: metrics.mainVerticalPadding,
+  },
+  numberLineBlock: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   numberContainer: {
     height: 40,

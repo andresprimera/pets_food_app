@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Text, TouchableOpacity, TextStyle} from 'react-native';
+import {View, Text, TouchableOpacity, TextStyle} from 'react-native';
 
 import {styles} from './styles';
 
@@ -15,9 +15,11 @@ export const ClickableText = (props: Props) => {
 
   return (
     <TouchableOpacity
+      style={styles.container}
       onPress={() => {
         onClick();
       }}>
+      <View style={styles.icon} />
       <Text style={[styles.text, style]}>{props.children}</Text>
     </TouchableOpacity>
   );

@@ -35,12 +35,12 @@ export const CheckoutStepTracker = () => {
         const isSelected = selected >= number;
         const turnLineOn = selected >= number + 1;
         return (
-          <>
+          <View key={'steptracker-' + index} style={styles.numberLineBlock}>
             <Number {...{number, isSelected, setSelected}} />
             {index !== 2 && (
               <View style={turnLineOn ? styles.selectedLine : styles.line} />
             )}
-          </>
+          </View>
         );
       })}
     </View>

@@ -15,5 +15,6 @@ export const metrics = {
   mainHorizontalPadding: width * 0.06,
   mainVerticalPadding: width * 0.06,
   innerHorzontalPadding: width * 0.03,
+  innerVerticalPadding: width * 0.02,
   navbarHeight: 78 + addHeader,
 };
