@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
     aspectRatio: 1,
   },
   productInfoContainer: {
-    flex: 4,
+    flex: 5,
     marginHorizontal: 5,
     flexDirection: 'column',
     justifyContent: 'space-around',
@@ -27,9 +27,9 @@ export const styles = StyleSheet.create({
     paddingLeft: metrics.screenWidth * 0.05,
   },
   productPrice: {
-    marginVertical: 12,
     marginHorizontal: 5,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    flex: 1,
   },
 });

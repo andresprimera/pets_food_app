@@ -1,13 +1,15 @@
 import * as React from 'react';
 import Svg, {SvgProps, Path} from 'react-native-svg';
 
-const PlusIconOld = (props: SvgProps) => (
-  <Svg width={17} height={17} {...props}>
-    <Path
-      d="M7.589 17V9.411H0V7.589h7.589V0H9.41v7.589H17V9.41H9.411V17Z"
-      fill={props.color ? props.color : '#707070'}
-    />
-  </Svg>
-);
+const PlusIcon = (props: SvgProps) => {
+  return (
+    <Svg height={'100%'} width={'100%'} viewBox={'0 0 48 48'} {...props}>
+      <Path
+        d="M22.5 38V25.5H10v-3h12.5V10h3v12.5H38v3H25.5V38Z"
+        fill={props.color ? props.color : '#707070'}
+      />
+    </Svg>
+  );
+};
 
-export default PlusIconOld;
+export default PlusIcon;

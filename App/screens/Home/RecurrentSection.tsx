@@ -11,15 +11,19 @@ export const RecurrentSection = () => {
   return (
     <View>
       <View style={styles.recurrentTop}>
-        <View>
-          <Image source={require('@app/assets/imgs/logo.jpg')} />
+        <View style={styles.imageContainer}>
+          <Image
+            style={styles.img}
+            source={require('@app/assets/imgs/logo.jpg')}
+          />
         </View>
+
         <View style={styles.recurrentTopText}>
-          <TextMedium>
+          <TextMedium style={styles.text}>
             En esta sección encontrarás el detalle de tus pedidos recurrentes.
           </TextMedium>
 
-          <TextMedium style={styles.recurrentTopTextBold}>
+          <TextMedium style={styles.textBold}>
             Al final de su compra podrá configurarla como recurrente
           </TextMedium>
         </View>

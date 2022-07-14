@@ -31,7 +31,7 @@ export const ButtonNavigation = () => {
         tabBarInactiveTintColor: 'gray',
         tabBarStyle: {
           backgroundColor: colors.primary,
-          height: 100,
+          paddingTop: 10,
         },
       })}>
       {ButtonRoutes.map((props, i) => {

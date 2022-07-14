@@ -1,5 +1,8 @@
+import BackIcon from './BackIcon';
 import BasketIcon from './BasketIcon';
-import PawIcon from './PawIcon';
 import HomeIcon from './HomeIcon';
+import MinusIcon from './minusIcon';
+import PawIcon from './PawIcon';
+import PlusIcon from './PlusIcon';
 
-export {BasketIcon, PawIcon, HomeIcon};
+export {BackIcon, BasketIcon, HomeIcon, MinusIcon, PawIcon, PlusIcon};

@@ -4,7 +4,7 @@ import {isIphoneX} from 'react-native-iphone-x-helper';
 
 const {width, height} = Dimensions.get('window');
 const isXSeriesIphone = isIphoneX();
-const addFooter = Platform.OS === 'ios' && isXSeriesIphone ? 20 : 0;
+const addFooter = Platform.OS === 'ios' && isXSeriesIphone ? 40 : 0;
 const addHeader = Platform.OS === 'ios' ? (isXSeriesIphone ? 40 : 20) : 0;
 
 export const metrics = {
@@ -12,9 +12,10 @@ export const metrics = {
   screenHeight: height,
   addHeader,
   addFooter,
-  mainHorizontalPadding: width * 0.06,
-  mainVerticalPadding: width * 0.06,
-  innerHorzontalPadding: width * 0.03,
-  innerVerticalPadding: width * 0.02,
+  largeHorizontalPadding: width * 0.06,
+  mainHorizontalPadding: width * 0.04,
+  mainVerticalPadding: width * 0.04,
+  innerHorzontalPadding: width * 0.02,
+  innerVerticalPadding: width * 0.01,
   navbarHeight: 78 + addHeader,
 };

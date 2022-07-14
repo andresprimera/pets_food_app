@@ -7,9 +7,11 @@ export const styles = StyleSheet.create({
     marginVertical: metrics.mainVerticalPadding,
   },
 
-  summaryTitle: {
-    backgroundColor: 'blue',
+  inner: {
+    paddingVertical: metrics.innerVerticalPadding,
   },
+
+  summaryTitle: {},
   subtotal: {
     flexDirection: 'row',
     alignItems: 'center',

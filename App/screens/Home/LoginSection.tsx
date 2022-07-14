@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {ClickableText} from '@app/components/atoms/ClickableText';
-import {TextRegular} from '@app/components/atoms/TextRegular';
+import {TextMedium} from '@app/components/atoms/TextMedium';
 
 import {View} from 'react-native';
 
@@ -10,8 +10,9 @@ import {styles} from './styles';
 export const LoginSection = () => {
   return (
     <View style={styles.loginSectionContainer}>
-      <TextRegular>Para ver tus pedidos recurrentes debes</TextRegular>
+      <TextMedium> tus pedidos recurrentes debes</TextMedium>
       <ClickableText
+        style={styles.clickableLink}
         onClick={() => {
           console.log('iniciar sesion');
         }}>

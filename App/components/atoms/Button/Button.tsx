@@ -1,10 +1,6 @@
 import React from 'react';
 
-import {TouchableOpacity} from 'react-native';
-
-import {useNavigation} from '@react-navigation/native';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {RootStackParamList} from '@app/config/router/RouteTypes';
+import {View, TouchableOpacity, StyleProp, ViewStyle} from 'react-native';
 
 import {colors, fonts} from '@app/theme';
 
@@ -13,22 +9,26 @@ import {TextRegular} from '../TextRegular';
 
 interface Props {
   text: string;
+  propStyle?: StyleProp<ViewStyle>;
+  onPress: () => void;
 }
 
-type authScreenProp = StackNavigationProp<RootStackParamList, 'Checkout'>;
-
-export const Button = ({text}: Props) => {
-  const navigation = useNavigation<authScreenProp>();
+export const Button = ({text, propStyle, onPress}: Props) => {
   return (
-    <TouchableOpacity
-      onPress={() => {
-        navigation.navigate('Checkout');
-      }}
-      style={styles.container}>
-      <TextRegular
-        style={{color: colors.light, fontFamily: fonts.family.secondary.light}}>
-        {text}
-      </TextRegular>
-    </TouchableOpacity>
+    <View style={propStyle}>
+      <TouchableOpacity
+        onPress={() => {
+          onPress();
+        }}
+        style={styles.container}>
+        <TextRegular
+          style={{
+            color: colors.light,
+            fontFamily: fonts.family.secondary.light,
+          }}>
+          {text}
+        </TextRegular>
+      </TouchableOpacity>
+    </View>
   );
 };

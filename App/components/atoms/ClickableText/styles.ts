@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 
-import {colors, fonts} from '@app/theme';
+import {fonts} from '@app/theme';
 
 const {size} = fonts;
 
@@ -10,13 +10,15 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   icon: {
-    marginRight: 10,
+    marginRight: 5,
+    height: 36,
+    width: 36,
   },
+
   text: {
-    color: colors.secondary,
     fontSize: size.large,
     textAlign: 'left',
-    fontFamily: fonts.family.secondary.black,
+    fontFamily: fonts.family.primary.semiBold,
     cursor: 'pointer',
   },
 });

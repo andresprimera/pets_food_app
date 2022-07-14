@@ -5,6 +5,7 @@ export const styles = StyleSheet.create({
     flex: 2,
     resizeMode: 'contain',
     justifyContent: 'center',
+    paddingVertical: 2,
   },
 
   image: {

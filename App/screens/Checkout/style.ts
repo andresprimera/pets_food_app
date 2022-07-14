@@ -3,10 +3,10 @@ import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
   containerTop: {
-    marginHorizontal: metrics.innerHorzontalPadding,
+    paddingHorizontal: metrics.innerHorzontalPadding,
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: metrics.mainVerticalPadding,
+    paddingTop: metrics.mainVerticalPadding,
   },
   icon: {
     height: 30,
@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
   stepsTracker: {
     flexDirection: 'row',
     justifyContent: 'center',
-    marginBottom: metrics.mainVerticalPadding,
+    paddingVertical: metrics.mainVerticalPadding,
   },
   numberLineBlock: {
     flexDirection: 'row',
@@ -32,6 +32,13 @@ export const styles = StyleSheet.create({
     borderRadius: 20,
     borderColor: colors.gray,
     borderWidth: 1,
+    shadowColor: colors.black,
+    shadowOffset: {
+      width: 2,
+      height: 3,
+    },
+    shadowOpacity: 0.2,
+    backgroundColor: colors.light,
   },
   selectedNumberContainer: {
     borderColor: colors.secondary,
@@ -41,6 +48,13 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 20,
+    shadowColor: colors.secondary,
+    shadowOffset: {
+      width: 2,
+      height: 3,
+    },
+    shadowOpacity: 0.2,
+    backgroundColor: colors.light,
   },
   numbers: {
     fontSize: fonts.size.medium,

@@ -4,7 +4,7 @@ import {TouchableOpacity, View} from 'react-native';
 import {styles} from './style';
 import {TextH4} from '@app/components/atoms/TextH4';
 import MinusIcon from '@app/assets/svgs/minusIcon';
-import PlusIcon from '@app/assets/svgs/plusIcon';
+import PlusIconOld from '@app/assets/svgs/plusIconOld';
 
 export const Buttons = () => {
   return (
@@ -21,7 +21,7 @@ export const Buttons = () => {
         onPress={() => {
           console.log('add an item');
         }}>
-        <PlusIcon />
+        <PlusIconOld />
       </TouchableOpacity>
     </View>
   );

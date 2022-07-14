@@ -6,8 +6,8 @@ export const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.secondary,
     borderRadius: 14,
-    paddingHorizontal: 14,
-    paddingVertical: 14,
+    paddingHorizontal: 10,
+    paddingVertical: 10,
     shadowColor: colors.black,
     shadowOffset: {
       width: 2,
