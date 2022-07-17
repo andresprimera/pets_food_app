@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
     paddingBottom: 20,
   },
   title: {
-    fontFamily: fonts.family.secondary.bold,
+    fontFamily: fonts.family.primary.bold,
     textAlign: 'center',
   },
   divider: {

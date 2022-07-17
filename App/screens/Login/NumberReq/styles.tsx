@@ -35,7 +35,7 @@ export const styles = StyleSheet.create({
     width: '100%',
   },
   title: {
-    fontFamily: fonts.family.secondary.bold,
+    fontFamily: fonts.family.primary.bold,
     textAlign: 'center',
   },
   image: {

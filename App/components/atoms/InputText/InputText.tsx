@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {View} from 'react-native';
+import {View, TextStyle} from 'react-native';
 
 import {TextInput} from 'react-native';
 
@@ -13,15 +13,17 @@ interface Props {
   value?: string;
   label?: string;
   placeholder?: string;
+  style?: TextStyle;
 }
 
 export const InputText = ({
   isDate = true,
   placeholder = 'Placeholder',
   label = 'label',
+  style,
 }: Props) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, style]}>
       <TextMedium style={styles.label}>{label}</TextMedium>
       <TextInput
         style={styles.input}
