@@ -2,6 +2,9 @@ import {StyleSheet} from 'react-native';
 import {colors, fonts} from '@app/theme';
 
 export const styles = StyleSheet.create({
+  container: {
+    minWidth: 200,
+  },
   input: {
     backgroundColor: colors.light,
     borderRadius: 15,

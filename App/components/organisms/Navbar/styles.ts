@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     height: metrics.navbarHeight,
     justifyContent: 'space-between',
-    paddingHorizontal: metrics.innerHorzontalPadding,
+    paddingHorizontal: metrics.mainHorizontalPadding,
     alignItems: 'center',
     flexDirection: 'row',
     paddingTop: metrics.addHeader,

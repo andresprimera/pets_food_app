@@ -4,7 +4,7 @@ import {View} from 'react-native';
 
 import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
-import {RootStackParamList} from '@app/config/router/RouteTypes';
+import {RootModalStackParamList} from '@app/config/router/RouteTypes';
 
 import {styles} from './styles';
 import {TextMedium} from '@app/components/atoms/TextMedium';
@@ -12,7 +12,7 @@ import {Button} from '@app/components/atoms/Button';
 import {Buttons} from '@app/components/organisms/ListItem/Buttons';
 import {Checkbox} from '@app/components/atoms/Checkbox';
 
-type authScreenProp = StackNavigationProp<RootStackParamList, 'Checkout'>;
+type authScreenProp = StackNavigationProp<RootModalStackParamList>;
 
 export const BasketSumary = () => {
   const navigation = useNavigation<authScreenProp>();
@@ -27,7 +27,7 @@ export const BasketSumary = () => {
       </View>
 
       <Button
-        onPress={() => navigation.navigate('Checkout')}
+        onPress={() => navigation.navigate('Login')}
         text={'Ir a pantalla de confirmación'}
       />
     </View>

@@ -2,7 +2,7 @@ import React from 'react';
 
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {Routes} from './routes';
+import {Routes, ModalRoutes} from './routes';
 
 const Stack = createStackNavigator();
 
@@ -12,9 +12,16 @@ export const StackNavigation = () => {
       screenOptions={{
         headerShown: false,
       }}>
-      {Routes.map((props, i) => {
-        return <Stack.Screen {...props} key={`${props.name}-${i}`} />;
-      })}
+      <Stack.Group>
+        {Routes.map((props, i) => {
+          return <Stack.Screen {...props} key={`${props.name}-${i}`} />;
+        })}
+      </Stack.Group>
+      <Stack.Group screenOptions={{presentation: 'modal'}}>
+        {ModalRoutes.map((props, i) => {
+          return <Stack.Screen {...props} key={`${props.name}-${i}`} />;
+        })}
+      </Stack.Group>
     </Stack.Navigator>
   );
 };

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {View} from 'react-native';
+
 import {TextInput} from 'react-native';
 
 import {styles} from './styles';
@@ -19,7 +21,7 @@ export const InputText = ({
   label = 'label',
 }: Props) => {
   return (
-    <>
+    <View style={styles.container}>
       <TextMedium style={styles.label}>{label}</TextMedium>
       <TextInput
         style={styles.input}
@@ -27,6 +29,6 @@ export const InputText = ({
         selectTextOnFocus={isDate}
         placeholder={placeholder}
       />
-    </>
+    </View>
   );
 };

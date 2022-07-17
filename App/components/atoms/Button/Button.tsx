@@ -15,12 +15,12 @@ interface Props {
 
 export const Button = ({text, propStyle, onPress}: Props) => {
   return (
-    <View style={propStyle}>
+    <View style={[propStyle, styles.container]}>
       <TouchableOpacity
         onPress={() => {
           onPress();
         }}
-        style={styles.container}>
+        style={styles.inner}>
         <TextRegular
           style={{
             color: colors.light,
