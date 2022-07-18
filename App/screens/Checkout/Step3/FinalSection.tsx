@@ -1,17 +1,25 @@
 import React from 'react';
 import {View} from 'react-native';
-
-import {Card} from '@app/components/atoms/Card';
 import {TextMedium} from '@app/components/atoms/TextMedium';
 import {styles} from './styles';
 import {TextRegular} from '@app/components/atoms/TextRegular';
-import {TextSmall} from '@app/components/atoms/TextSmall';
-import {TextTiny} from '@app/components/atoms/TextTiny';
+import {AddressCard} from '@app/components/molecules/AddressCard/AddressCard';
 
 const sumary = [
   {title: 'Fecha de entrega', value: '30/07/2022'},
   {title: 'Método de entrega', value: 'Retiro en tienda'},
 ];
+
+const address = {
+  title: 'Casa',
+  address: 'San Antonio a Santa Isabel',
+  building: 'Casa',
+  number: '49',
+  neighborhood: 'La Pastora',
+  city: 'Caracas',
+  locationAid: 'Dos cuadras más arriba del mercado',
+  isSelected: true,
+};
 
 export const FinalSection = () => {
   return (
@@ -23,16 +31,7 @@ export const FinalSection = () => {
         </View>
       ))}
       <TextMedium style={styles.title}>Dirección de entrega</TextMedium>
-      <Card>
-        <View style={styles.addressContainer}>
-          <TextMedium style={styles.cardTitle}>Casa</TextMedium>
-          <TextSmall style={styles.addressText}>
-            {'San antonio a Santa Isabel #49'}
-          </TextSmall>
-          <TextSmall style={styles.addressText}>La Pastora - Caracas</TextSmall>
-          <TextTiny style={styles.addressText}>Al lado del farmatodo</TextTiny>
-        </View>
-      </Card>
+      <AddressCard {...address} />
     </View>
   );
 };

@@ -16,7 +16,7 @@ import {metrics} from '@app/theme';
 type checkoutProps = StackNavigationProp<CheckoutStackParamList, 'Step2'>;
 
 function handleNavigate(navigation: checkoutProps) {
-  navigation.navigate('Step2');
+  navigation.navigate('Step3');
 }
 
 export const Checkout = () => {

@@ -19,6 +19,7 @@ export const ListItem = () => {
       <View style={styles.buttons}>
         <Buttons />
       </View>
+      <View style={styles.spacer} />
     </View>
   );
 };

@@ -7,6 +7,7 @@ import {MainBottomTabParamList} from './RouteTypes';
 import {ButtonRoutes} from './routes';
 import {colors} from '@app/theme';
 import {BasketIcon, HomeIcon} from '@app/assets/svgs';
+import PersonIcon from '@app/assets/svgs/PersonIcon';
 
 const Tab = createBottomTabNavigator<MainBottomTabParamList>();
 
@@ -22,6 +23,8 @@ export const ButtonNavigation = () => {
             mainIcon = <HomeIcon />;
           } else if (route.name === 'Basket') {
             mainIcon = <BasketIcon />;
+          } else if (route.name === 'Profile') {
+            mainIcon = <PersonIcon />;
           }
 
           return mainIcon;

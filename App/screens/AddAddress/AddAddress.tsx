@@ -1,14 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-import {
-  View,
-  Text,
-  KeyboardAvoidingView,
-  TouchableWithoutFeedback,
-  Platform,
-  Keyboard,
-} from 'react-native';
-import {ScrollView} from 'react-native-gesture-handler';
+import {View, ImageBackground} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {MainModalScreensProps} from '@app/config/router/RouteTypes';
 
@@ -19,6 +11,8 @@ import {Divider} from '@app/components/atoms/Divider';
 import {TextRegular} from '@app/components/atoms/TextRegular';
 import {InputText} from '@app/components/atoms/InputText';
 import {Button} from '@app/components/atoms/Button';
+import {ConfirmationModal} from '@app/components/atoms/ConfirmationModal';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
 const fields = [
   {label: 'Alias de dirección', placeholder: 'Ej. Oficina / Casa'},
@@ -42,42 +36,47 @@ const Item = (field: any) => {
 };
 
 export const AddAddress = () => {
+  const [opened, setOpened] = useState<boolean>(false);
   const navigation = useNavigation<MainModalScreensProps>();
+
   return (
-    <KeyboardAvoidingView
-      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-      style={styles.container}
-      keyboardVerticalOffset={0}>
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <View>
-          <View style={styles.titleContainer}>
-            <TextH5 style={styles.title}>Agregar nueva dirección</TextH5>
-          </View>
-          <Divider />
-          <ScrollView>
-            <View style={styles.innerContainer}>
-              <TextRegular style={styles.subtitle}>
-                Indica la ubicación en el mapa
-              </TextRegular>
-            </View>
-            <View style={styles.map}>
-              <Text>Map</Text>
-            </View>
-            <View style={styles.innerContainer}>
-              <View style={styles.list}>
-                {fields.map((field, i) => {
-                  return <Item key={'address-' + i} item={field} />;
-                })}
-              </View>
-              <Button
-                onPress={() => navigation.goBack()}
-                text="Crear Dirección"
-              />
-              <View style={styles.spacer} />
-            </View>
-          </ScrollView>
+    <View>
+      <ConfirmationModal
+        opened={opened}
+        handleCloseModal={setOpened}
+        navigation={navigation}
+        message="Dirección creada con éxito"
+      />
+      <View style={styles.titleContainer}>
+        <TextH5 style={styles.title}>Agregar nueva dirección</TextH5>
+      </View>
+      <Divider />
+      <KeyboardAwareScrollView>
+        <View style={styles.innerContainer}>
+          <TextRegular style={styles.subtitle}>
+            Indica la ubicación en el mapa
+          </TextRegular>
         </View>
-      </TouchableWithoutFeedback>
-    </KeyboardAvoidingView>
+        <ImageBackground
+          source={require('@app/assets/imgs/googleMapDummy.png')}
+          resizeMode="cover"
+          style={styles.map}
+        />
+        <View style={styles.innerContainer}>
+          <View style={styles.list}>
+            {fields.map((field, i) => {
+              return <Item key={'address-' + i} item={field} />;
+            })}
+          </View>
+          <Button
+            onPress={() => {
+              setOpened(!opened);
+            }}
+            text="Crear Dirección"
+          />
+          <View style={styles.spacer} />
+        </View>
+      </KeyboardAwareScrollView>
+    </View>
   );
 };

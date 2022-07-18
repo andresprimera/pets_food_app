@@ -7,4 +7,5 @@ export const colors = {
   gray: '#707070',
   mediumGray: '#d3d3d3',
   lightGray: '#afafaf',
+  modalBackgroundColor: 'rgba(41, 9, 41,.6)',
 };

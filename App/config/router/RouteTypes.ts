@@ -21,6 +21,8 @@ export type MainModalScreensProps =
 export type MainBottomTabParamList = {
   Home: undefined;
   Basket: undefined;
+  Orders: undefined;
+  Profile: undefined;
 };
 
 export type MainBottomScreenProps = StackNavigationProp<MainBottomTabParamList>;

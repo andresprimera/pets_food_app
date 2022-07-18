@@ -10,6 +10,8 @@ import {Checkout} from '@app/screens/Checkout';
 import {ButtonNavigation} from './ButtonNavigation';
 import {LoginStackNavigation} from '@app/screens/Login';
 import {AddAddress} from '@app/screens/AddAddress';
+import {Profile} from '@app/screens/Profile';
+import {Orders} from '@app/screens/Orders';
 
 type ButtonRouteType = {
   name: keyof MainBottomTabParamList;
@@ -29,6 +31,8 @@ type StackModalRouteType = {
 export const ButtonRoutes: ButtonRouteType = [
   {name: 'Home', component: HomeScreen},
   {name: 'Basket', component: Basket},
+  {name: 'Orders', component: Orders},
+  {name: 'Profile', component: Profile},
 ];
 
 export const Routes: StackRouteType = [

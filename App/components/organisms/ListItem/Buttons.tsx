@@ -2,7 +2,7 @@ import React from 'react';
 import {TouchableOpacity, View} from 'react-native';
 
 import {styles} from './style';
-import {TextH4} from '@app/components/atoms/TextH4';
+import {TextLarge} from '@app/components/atoms/TextLarge';
 import MinusIcon from '@app/assets/svgs/minusIcon';
 import PlusIconOld from '@app/assets/svgs/plusIconOld';
 
@@ -16,7 +16,7 @@ export const Buttons = () => {
         <MinusIcon />
       </TouchableOpacity>
 
-      <TextH4 style={styles.qty}>2</TextH4>
+      <TextLarge style={styles.qty}>4</TextLarge>
       <TouchableOpacity
         onPress={() => {
           console.log('add an item');

@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   buttons: {
-    flex: 3,
+    flex: 2,
   },
   price: {
     fontFamily: fonts.family.secondary.bold,
@@ -31,5 +31,8 @@ export const styles = StyleSheet.create({
   buttonSize: {
     height: 40,
     width: 40,
+  },
+  spacer: {
+    flex: 1,
   },
 });
