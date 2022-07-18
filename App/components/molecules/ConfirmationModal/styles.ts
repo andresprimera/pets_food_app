@@ -35,6 +35,12 @@ export const styles = StyleSheet.create({
     paddingHorizontal: metrics.screenWidth / 9,
     fontFamily: fonts.family.primary.bold,
   },
+  smallText: {
+    fontFamily: fonts.family.secondary.thin,
+    textAlign: 'center',
+    paddingTop: 20,
+    paddingHorizontal: metrics.screenWidth * 0.1,
+  },
   back: {
     paddingTop: 30,
     fontFamily: fonts.family.secondary.bold,

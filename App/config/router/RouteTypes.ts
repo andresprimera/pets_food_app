@@ -12,6 +12,7 @@ export type MainStackScreensProps = StackNavigationProp<RootStackParamList>;
 export type RootModalStackParamList = {
   Login: undefined;
   AddAddress: undefined;
+  RecurrentOrder: undefined;
 };
 
 export type MainModalScreensProps =

@@ -5,6 +5,7 @@ import MinusIcon from './minusIcon';
 import PawIcon from './PawIcon';
 import PlusIcon from './PlusIcon';
 import CheckIcon from './CheckIcon';
+import ReceiptIcon from './ReceiptIcon';
 
 export {
   BackIcon,
@@ -14,4 +15,5 @@ export {
   PawIcon,
   PlusIcon,
   CheckIcon,
+  ReceiptIcon,
 };

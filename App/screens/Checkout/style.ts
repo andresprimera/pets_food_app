@@ -72,4 +72,56 @@ export const styles = StyleSheet.create({
     height: 1,
     marginHorizontal: 3,
   },
+
+  container: {
+    backgroundColor: colors.modalBackgroundColor,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  innerContainer: {
+    backgroundColor: colors.light,
+    width: metrics.screenWidth * 0.7,
+    minHeight: 400,
+    borderRadius: 25,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: metrics.largeVerticalPadding + 20,
+  },
+  orderNumber: {
+    fontFamily: fonts.family.secondary.bold,
+    paddingBottom: metrics.largeVerticalPadding,
+  },
+  imgContainer: {
+    marginHorizontal: metrics.screenWidth / 7,
+    resizeMode: 'contain',
+    justifyContent: 'center',
+    paddingVertical: 2,
+  },
+
+  image: {
+    width: '100%',
+    height: undefined,
+    aspectRatio: 1,
+  },
+  text: {
+    textAlign: 'center',
+    paddingHorizontal: metrics.screenWidth / 15,
+    fontFamily: fonts.family.primary.bold,
+  },
+  smallText: {
+    fontFamily: fonts.family.secondary.thin,
+    textAlign: 'center',
+    paddingTop: 20,
+    paddingHorizontal: metrics.screenWidth * 0.1,
+  },
+  actionButtonsContainer: {
+    paddingVertical: metrics.innerVerticalPadding,
+    alignItems: 'center',
+  },
+  action: {
+    paddingTop: 10,
+    fontFamily: fonts.family.secondary.bold,
+  },
 });

@@ -11,7 +11,7 @@ import {Divider} from '@app/components/atoms/Divider';
 import {TextRegular} from '@app/components/atoms/TextRegular';
 import {InputText} from '@app/components/atoms/InputText';
 import {Button} from '@app/components/atoms/Button';
-import {ConfirmationModal} from '@app/components/atoms/ConfirmationModal';
+import {ConfirmationModal} from '@app/components/molecules/ConfirmationModal';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
 const fields = [

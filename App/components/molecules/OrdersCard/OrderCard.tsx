@@ -8,7 +8,11 @@ import {Card} from '@app/components/atoms/Card';
 import {TextSmall} from '@app/components/atoms/TextSmall';
 import {ClickableText} from '@app/components/atoms/ClickableText';
 
-export const OrderCard = () => {
+interface Props {
+  openConfirmationModal?: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export const OrderCard = ({openConfirmationModal}: Props) => {
   return (
     <Card>
       <View style={styles.content}>
@@ -29,7 +33,12 @@ export const OrderCard = () => {
           </View>
         </View>
         <View style={styles.lineStretched}>
-          <ClickableText onClick={() => console.log('Show details')}>
+          <ClickableText
+            onClick={() => {
+              if (openConfirmationModal) {
+                openConfirmationModal(true);
+              }
+            }}>
             Detalles
           </ClickableText>
           <ClickableText onClick={() => console.log('go to payment report')}>

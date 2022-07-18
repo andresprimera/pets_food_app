@@ -6,7 +6,8 @@ import {MainModalScreensProps} from '@app/config/router/RouteTypes';
 
 import {styles} from './styles';
 import {TextH5} from '@app/components/atoms/TextH5';
-import {ClickableText} from '../ClickableText';
+import {TextSmall} from '@app/components/atoms/TextSmall';
+import {ClickableText} from '../../atoms/ClickableText';
 
 interface Props {
   opened: boolean;
@@ -14,6 +15,7 @@ interface Props {
   navigation?: MainModalScreensProps;
   message: string;
   pictureUrl?: ImageSourcePropType;
+  additionalInfo?: string;
 }
 
 export const ConfirmationModal = ({
@@ -22,6 +24,7 @@ export const ConfirmationModal = ({
   navigation,
   message = 'La operación ha sido un éxito',
   pictureUrl = require('@app/assets/imgs/celebrationDog.png'),
+  additionalInfo,
 }: Props) => {
   console.log('handlesCloseModal =>', handleCloseModal);
   return (
@@ -32,6 +35,10 @@ export const ConfirmationModal = ({
             <Image style={styles.image} source={pictureUrl} />
           </View>
           <TextH5 style={styles.text}>{message}</TextH5>
+
+          {additionalInfo && (
+            <TextSmall style={styles.smallText}>{additionalInfo}</TextSmall>
+          )}
           <ClickableText
             style={styles.back}
             onClick={() => {

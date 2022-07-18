@@ -12,6 +12,7 @@ import {LoginStackNavigation} from '@app/screens/Login';
 import {AddAddress} from '@app/screens/AddAddress';
 import {Profile} from '@app/screens/Profile';
 import {Orders} from '@app/screens/Orders';
+import {RecurrentOrder} from '@app/screens/RecurrentOrder';
 
 type ButtonRouteType = {
   name: keyof MainBottomTabParamList;
@@ -43,4 +44,5 @@ export const Routes: StackRouteType = [
 export const ModalRoutes: StackModalRouteType = [
   {name: 'Login', component: LoginStackNavigation},
   {name: 'AddAddress', component: AddAddress},
+  {name: 'RecurrentOrder', component: RecurrentOrder},
 ];

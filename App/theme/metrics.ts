@@ -13,6 +13,7 @@ export const metrics = {
   addHeader,
   addFooter,
   largeHorizontalPadding: width * 0.06,
+  largeVerticalPadding: width * 0.05,
   mainHorizontalPadding: width * 0.04,
   mainVerticalPadding: width * 0.04,
   innerHorzontalPadding: width * 0.02,

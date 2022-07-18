@@ -36,8 +36,7 @@ export const RecurrentSection = () => {
       <View style={styles.recurrentBottom}>
         <ClickableText
           onClick={() => {
-            console.log('andres es lo máximo');
-            navigation.navigate('AddAddress');
+            navigation.navigate('RecurrentOrder');
           }}>
           ¿Qué es un pedido recurrente?
         </ClickableText>
